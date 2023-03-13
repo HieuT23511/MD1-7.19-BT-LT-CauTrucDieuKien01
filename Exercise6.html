@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise6</title>
+</head>
+<body>
+Nhập vào doanh số <label for="inputDS"></label>
+<input type="number" id="inputDS"> <br>
+<button type="button" id="calculate"> Calculate</button>
+<br>
+<b id="display"></b>
+<script>
+    let calculate = document.getElementById('calculate');
+    calculate.addEventListener("click", calculateHH);
+    function calculateHH() {
+        let inputDS = +document.getElementById('inputDS').value;
+        let Money;
+        if (inputDS <= 100000000) {
+            Money = +inputDS * 0.05;
+        } else if (inputDS > 100000000 && inputDS <= 500000000) {
+            Money = inputDS * 0.1;
+        } else {
+            Money = inputDS * 0.15;
+        }
+        document.getElementById('display').innerHTML = 'Hoa hồng nhận được là ' + Money + 'VND';
+    }
+</script>
+</body>
+</html>
