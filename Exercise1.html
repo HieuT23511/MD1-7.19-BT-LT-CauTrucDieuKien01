@@ -17,7 +17,7 @@ Nhập vào số b: <input id="inputb" type="number"> <br>
     function check() {
         let inputa = +document.getElementById('inputa').value;
         let inputb = +document.getElementById('inputb').value;
-        if (Number.isInteger(inputa) && Number.isInteger(inputb)) {
+        if (Number.isInteger(inputa) && Number.isInteger(inputb) && (inputb !==0)) {
             if (inputa % inputb === 0) {
                 display.innerHTML = 'Số a chia hết cho số b';
             } else {
