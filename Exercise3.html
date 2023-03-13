@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise3</title>
+</head>
+<body>
+<h2>Nhập vào số bất kỳ</h2>
+<input type="number" id="inputA" placeholder="Nhập vào số bất kỳ"> <br>
+<br>
+<button type="button" id="check"> Kiểm tra</button>
+<br> <br>
+<b id="display"></b>
+<script>
+    let btn = document.getElementById('check')
+    btn.addEventListener("click", CheckAge)
+    function CheckAge() {
+        let inputA = +document.getElementById('inputA').value;
+        if (Number.isInteger(inputA)) {
+            if (inputA > 0) {
+                document.getElementById('display').innerHTML = `Số ${inputA} là số lớn hơn 0`
+            } else {
+                document.getElementById('display').innerHTML = `Số${inputA}  là số nhỏ hơn 0`
+            }
+        } else {
+            alert('Vui lòng nhập lại ')
+        }
+    }
+</script>
+</body>
+</html>
