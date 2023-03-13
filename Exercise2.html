@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+</head>
+<body>
+<h2>Kiểm tra số tuổi vào lớp 10</h2>
+<input type="number" id="inputAge" placeholder="Nhập vào số tuổi"> <br>
+<button type="button" id="check"> Kiểm tra</button>
+<br>
+<b id="display"></b>
+<script>
+    let btn = document.getElementById('check')
+    btn.addEventListener("click", CheckAge)
+
+    function CheckAge() {
+        let inputAge = +document.getElementById('inputAge').value;
+        if (Number.isInteger(inputAge) && (inputAge > 0)) {
+            if (inputAge >= 16) {
+                document.getElementById('display').innerHTML = 'Học sinh đủ tuổi vào lớp 10'
+            } else {
+                document.getElementById('display').innerHTML = 'Học sinh không đủ tuổi vào lớp 10'
+            }
+        } else {
+            alert('Vui lòng nhập lại ')
+        }
+    }
+</script>
+</body>
+</html>
