@@ -18,9 +18,9 @@
         let inputAge = +document.getElementById('inputAge').value;
         if (Number.isInteger(inputAge) && (inputAge > 0)) {
             if (inputAge >= 16) {
-                document.getElementById('display').innerHTML = 'Học sinh đủ tuổi vào lớp 10'
+                document.getElementById('display').innerHTML = `Học sinh ${inputAge} tuổi đủ tuổi vào lớp 10`
             } else {
-                document.getElementById('display').innerHTML = 'Học sinh không đủ tuổi vào lớp 10'
+                document.getElementById('display').innerHTML = `Học sinh ${inputAge}  không tuổi đủ tuổi vào lớp 10`
             }
         } else {
             alert('Vui lòng nhập lại ')
