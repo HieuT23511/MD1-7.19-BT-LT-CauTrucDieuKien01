@@ -19,9 +19,9 @@ Nhập vào số b: <input id="inputb" type="number"> <br>
         let inputb = +document.getElementById('inputb').value;
         if (Number.isInteger(inputa) && Number.isInteger(inputb) && (inputb !==0)) {
             if (inputa % inputb === 0) {
-                display.innerHTML = 'Số a chia hết cho số b';
+                display.innerHTML = `${inputa} chia hết cho ${inputb}`;
             } else {
-                display.innerHTML = 'Số a không chia hết cho số b';
+                display.innerHTML = `${inputa} không chia hết cho ${inputb}`;
             }
         } else {
             alert('Vui lòng nhập lại: a; b là các số nguyên');
