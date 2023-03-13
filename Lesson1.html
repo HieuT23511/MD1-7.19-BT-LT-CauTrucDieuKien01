@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 1</title>
+</head>
+<body>
+Nhập vào số a: <input id="inputa" type="number"> <br>
+Nhập vào số b: <input id="inputb" type="number"> <br>
+<button type="button" id="check">Kiểm tra</button>
+<br>
+<b id="display"></b>
+<script>
+    let btn = document.getElementById('check');
+    btn.addEventListener("click", check);
+    let display = document.getElementById('display');
+    function check() {
+        let inputa = +document.getElementById('inputa').value;
+        let inputb = +document.getElementById('inputb').value;
+        if (Number.isInteger(inputa) && Number.isInteger(inputb)) {
+            if (inputa % inputb === 0) {
+                display.innerHTML = 'Số a chia hết cho số b';
+            } else {
+                display.innerHTML = 'Số a không chia hết cho số b';
+            }
+        } else {
+            alert('Vui lòng nhập lại: a; b là các số nguyên');
+        }
+    }
+
+</script>
+</body>
+</html>
