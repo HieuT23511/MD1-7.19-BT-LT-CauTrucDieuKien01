@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise5</title>
+</head>
+<body>
+<script>
+    let ExamPoint = +prompt('Nhap vao diem bai kiem tra');
+    let MidtermPoint = +prompt('Nhap vao diem thi giua ki');
+    let FinalPoint = +prompt('Nhap vao diem thi cuoi ki');
+    let AveragePoint = (ExamPoint + MidtermPoint * 3 + FinalPoint * 6) / 10;
+    if (0 <= ExamPoint && ExamPoint <= 10 && 0 <= MidtermPoint && MidtermPoint <= 10 && 0 <= FinalPoint && FinalPoint <= 10) {
+        if (AveragePoint > 8) {
+            alert('Xếp loại Giỏi');
+        } else if (AveragePoint >= 6.5) {
+            alert('Xếp loại Khá');
+        } else if (AveragePoint >= 5) {
+            alert('Xếp loại Trung Bình')
+        } else {
+            alert('Xếp loại Dưới Trung Bình')
+        }
+    } else {
+        alert('Vui lòng nhập lại')
+    }
+</script>
+</body>
+</html>
